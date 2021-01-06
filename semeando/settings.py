@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "crispy_forms",
     # local
-    #"users.apps.UsersConfig",
+
     "pages.apps.PagesConfig",
 ]
 

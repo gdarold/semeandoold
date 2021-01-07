@@ -25,7 +25,8 @@ SECRET_KEY = 'so_v61%t)2h0rnr94y(o3$_i(1ia=f$jr_=-w(qd9nz(4c=_g&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "crispy_forms",
+
     # local
 
     "pages.apps.PagesConfig",
@@ -58,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'semeando.urls'
@@ -73,10 +76,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
             ],
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'semeando.wsgi.application'
 
@@ -135,6 +141,8 @@ STATIC_URL = '/static/'
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
+
+
 ]
 SITE_ID = 1
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
@@ -150,3 +158,4 @@ ACCOUNT_UNIQUE_EMAIL = True
 # crispy-forms
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
